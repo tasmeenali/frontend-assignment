@@ -1,4 +1,4 @@
-# Stock Stock Data Fetcher App
+# Stock Data Fetcher App
 
 This project consists of two parts: a client-side application built with React and a server-side application built with Node.js and Express. The purpose of this application is to fetch stock data of a particular stock for a specific date using the Polygon API and display the required details on the frontend.
 
