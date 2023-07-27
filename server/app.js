@@ -28,7 +28,25 @@ app.enable('trust proxy');
 
 app.post('/api/fetchStockData', (req, res) => {
     // YOUR CODE GOES HERE, PLEASE DO NOT EDIT ANYTHING OUTSIDE THIS FUNCTION
-    res.sendStatus(200);
+    const { symbol, date } = req.query;
+
+    if (!symbol || !date) {
+        return res.status(400).json({ error: 'Missing parameters: symbol and date are required.' });
+    }
+
+    const base_url = 'https://api.polygon.io';
+    const endpoint = `/v1/open-close/${symbol}/${date}`;
+    const params = {
+        apiKey: 'hLb04tS3G2929RgmCBzFMk4fVY4C6DYE'
+    };
+
+    try {
+        const response = axios.get(`${base_url}${endpoint}`, { params });
+        const stockData = response.data;
+        return res.status(200).json(stockData);
+    } catch (error) {
+        return res.status(error.response?.status || 500).json({ error: 'Error fetching Stock Data.' });
+    }
 });
 
 const port = process.env.PORT || 5000;

@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #02B2AF;
+    text-align: center;
+    padding: 20px;
+}
+
+h3 {
+    margin: 20px;
+}
+
+.form-container {
+    margin: 20px;
+}
+
+.stock-details {
+    margin-top: 200px;
+}
+
+.result-container {
+    display: flex;
+    margin-left: 400px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    flex: 1;
+    padding-right: 10px;
+    margin-left: 45px;
+}
+
+.input-group input {
+    flex: 2;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    margin: 10px;
+}
+
+
+button[type="submit"] {
+    background-color: #02B2AF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 280px;
+}
+
+button[type="submit"]:hover {
+    background-color: #02B2AF;
+}
+
+
+form {
+    max-width: 700px;
+    margin: 0 auto;
+}
